@@ -13,7 +13,7 @@ const App = () => {
       <View style={styles.container_1}>
         <View style={styles.top_nav}>
           <View style={styles.user}>
-            <Image source={require('/Users/bph/Documents/GitHub/smartplate/smartplate/assets/favicon.png')} style={styles.pfp} />
+            <Image source={require('../smartplate/assets/favicon.png')} style={styles.pfp} />
             <View style={styles.username}>
               <Text style={{fontSize: 15, color: 'white', fontWeight: 600}}>
                 Hi Jacob
@@ -95,7 +95,7 @@ const App = () => {
             </View>
             <View style={styles.nutrition_stack}>
               <View style={styles.nutrition_stats}>
-                <Image source={require('/Users/bph/Documents/GitHub/smartplate/smartplate/assets/fire-flame-curved-solid 1.png')} style={styles.nutrition_icon} />
+                <Image source={require('../smartplate/assets/fire-flame-curved-solid 1.png')} style={styles.nutrition_icon} />
                 
                 <View style={styles.nutrition_num}>
                   <Text style={{fontSize: 30, fontWeight: 500, color: 'white'}}>
@@ -107,7 +107,7 @@ const App = () => {
                 </View>
               </View>
               <View style={styles.nutrition_stats}>
-              <Image source={require('/Users/bph/Documents/GitHub/smartplate/smartplate/assets/droplet-solid 1.png')} style={styles.nutrition_icon} />
+              <Image source={require('../smartplate/assets/droplet-solid 1.png')} style={styles.nutrition_icon} />
                 
                 <View style={styles.nutrition_num}>
                   <Text style={{fontSize: 30, fontWeight: 500, color: 'white'}}>
@@ -119,7 +119,7 @@ const App = () => {
                 </View>
               </View>
               <View style={styles.nutrition_stats}>
-              <Image source={require('/Users/bph/Documents/GitHub/smartplate/smartplate/assets/bolt-lightning-solid 1.png')} style={styles.nutrition_icon} />
+              <Image source={require('../smartplate/assets/bolt-lightning-solid 1.png')} style={styles.nutrition_icon} />
                 
                 <View style={styles.nutrition_num}>
                   <Text style={{fontSize: 30, fontWeight: 500, color: 'white'}}>
@@ -137,15 +137,15 @@ const App = () => {
       </View>
       <View style={styles.navbar}>
         <View style={styles.nav_button}>
-          <Image source={require('/Users/bph/Documents/GitHub/smartplate/smartplate/assets/home.png')} style={styles.nutrition_icon} />
+          <Image source={require('../smartplate/assets/home.png')} style={styles.nutrition_icon} />
           <Text style={{fontSize: 12, fontWeight: 500, color: '#777777'}}>Home</Text>
         </View>
         <View style={styles.nav_button}>
-          <Image source={require('/Users/bph/Documents/GitHub/smartplate/smartplate/assets/restaurant.png')} style={styles.nutrition_icon} />
+          <Image source={require('../smartplate/assets/restaurant.png')} style={styles.nutrition_icon} />
           <Text style={{fontSize: 12, fontWeight: 500, color: '#777777'}}>Food</Text>
         </View>
         <View style={styles.nav_button}>
-          <Image source={require('/Users/bph/Documents/GitHub/smartplate/smartplate/assets/leaderboard.png')} style={styles.nutrition_icon} />
+          <Image source={require('../smartplate/assets/leaderboard.png')} style={styles.nutrition_icon} />
           <Text style={{fontSize: 12, fontWeight: 500, color: '#777777'}}>Leaderboard</Text>
         </View>
 
