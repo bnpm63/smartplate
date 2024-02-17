@@ -1,11 +1,11 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight} from 'react-native';
-
-
-
+import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight, TouchableOpacity} from 'react-native';
 
 const Home = ({ navigation }) => {
+  const handleNavPress = (buttonId) => {
+    navigation.navigate(buttonId);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.container_1}>
@@ -134,25 +134,24 @@ const Home = ({ navigation }) => {
         </View>
       </View>
       <View style={styles.navbar}>
-        <View style={styles.nav_button}>
+        <TouchableOpacity onPress={() => handleNavPress('Home')} style={styles.nav_button}>
           <Image source={require('../smartplate/assets/home.png')} style={styles.nutrition_icon} />
           <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Home</Text>
-        </View>
-        <View style={styles.nav_button}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleNavPress('Food')} style={styles.nav_button}>
           <Image source={require('../smartplate/assets/restaurant.png')} style={styles.nutrition_icon} />
           <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Food</Text>
-        </View>
-        <View style={styles.nav_button}>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleNavPress('Leaderboard')} style={styles.nav_button}>
           <Image source={require('../smartplate/assets/leaderboard.png')} style={styles.nutrition_icon} />
           <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Leaderboard</Text>
-        </View>
+        </TouchableOpacity>
 
       </View>
 
     </View>
   );
 };
-
 
 const styles = StyleSheet.create({
  container: {
