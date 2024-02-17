@@ -21,8 +21,11 @@ const Login = () => {
                         Sign in to your account
                     </Text>
                 </View>
-                <View style={{}}>
-
+                <View style={{alignItems: 'center', justifyContent: 'space-around', flex: 1}}>
+                    <View style={styles.login_button}>
+                        <Image source={require('../smartplate/assets/free-google-1772223-1507807.webp')} style={{}} />
+                        <Text style={{color: 'EDEDED', fontSize: '13', fontWeight: '300'}}> Sign in with Google</Text>
+                    </View>
                 </View>
 
             </View>
@@ -48,6 +51,13 @@ const styles = StyleSheet.create({
    marginBottom: 30,
    marginLeft: 30,
    marginRight: 30, 
+ },
+
+ login_button: {
+    backgroundColor: '#1D1D1D',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 7,
  },
 
 });
