@@ -8,7 +8,6 @@ import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight} from 'reac
 
 const Login = () => {
  return (
-  <NavigationContainer>
     <View style={styles.container}>
         <View style={styles.container_1}>
             <View style={{flex: 1}}></View>
@@ -32,8 +31,6 @@ const Login = () => {
         </View>
 
     </View>
-    
-  </NavigationContainer>
  );
 };
 

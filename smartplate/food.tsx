@@ -8,7 +8,6 @@ import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight} from 'reac
 
 const Food = () => {
  return (
-  <NavigationContainer>
     <View style={styles.container}>
         <View style={styles.container_1}>
             <View style={{flex: 1}}></View>
@@ -29,8 +28,6 @@ const Food = () => {
         </View>
 
     </View>
-    
-  </NavigationContainer>
  );
 };
 
