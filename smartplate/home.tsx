@@ -1,24 +1,22 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight} from 'react-native';
+import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight, TouchableOpacity} from 'react-native';
 
+const Home = ({ navigation }) => {
+  const handleNavPress = (buttonId) => {
+    navigation.navigate(buttonId);
+  };
 
-
-
-const Home = () => {
- return (
-  <NavigationContainer>
+  return (
     <View style={styles.container}>
       <View style={styles.container_1}>
         <View style={styles.top_nav}>
           <View style={styles.user}>
             <Image source={require('../smartplate/assets/favicon.png')} style={styles.pfp} />
             <View style={styles.username}>
-              <Text style={{fontSize: 15, color: 'white', fontWeight: 600}}>
+              <Text style={{ fontSize: 15, color: 'white', fontWeight: 600 }}>
                 Hi Jacob
               </Text>
-              <Text style={{fontSize: 12, color: '#626262', fontWeight: 600}}>
+              <Text style={{ fontSize: 12, color: '#626262', fontWeight: 600 }}>
                 Let's see your progress
               </Text>
             </View>
@@ -30,7 +28,7 @@ const Home = () => {
         </View>
 
         <View style={styles.progress}>
-          <View style={{flex: 1}}></View>
+          <View style={{ flex: 1 }}></View>
           <Text style={styles.header}>
             My Progress
           </Text>
@@ -40,7 +38,7 @@ const Home = () => {
               <Text style={{ fontSize: 20, fontWeight: 500, color: '#666666', marginBottom: 20, marginLeft: 10 }}>completed</Text>
             </View>
           </View>
-          <View style={{flex: 1}}></View>
+          <View style={{ flex: 1 }}></View>
         </View>
 
         <View style={styles.lower}>
@@ -51,29 +49,29 @@ const Home = () => {
             <View style={styles.goal_stack}>
               <View style={styles.verticleLine}></View>
               <View style={styles.goal_stats}>
-                <Text style={{fontSize: 13, fontWeight: 500, color: '#666666'}}>
-                 Calories
+                <Text style={{ fontSize: 13, fontWeight: 500, color: '#666666' }}>
+                  Calories
                 </Text>
-                <Text style={{fontSize: 16, fontWeight: 500, color: '#C9C9C9'}}>
-                 320/400
-                </Text>
-              </View>
-              <View style={styles.verticleLine}></View>
-              <View style={styles.goal_stats}>
-                <Text style={{fontSize: 13, fontWeight: 500, color: '#666666'}}>
-                 Calories
-                </Text>
-                <Text style={{fontSize: 16, fontWeight: 500, color: '#C9C9C9'}}>
-                 320/400
+                <Text style={{ fontSize: 16, fontWeight: 500, color: '#C9C9C9' }}>
+                  320/400
                 </Text>
               </View>
               <View style={styles.verticleLine}></View>
               <View style={styles.goal_stats}>
-                <Text style={{fontSize: 13, fontWeight: 500, color: '#666666'}}>
-                 Calories
+                <Text style={{ fontSize: 13, fontWeight: 500, color: '#666666' }}>
+                  Calories
                 </Text>
-                <Text style={{fontSize: 16, fontWeight: 500, color: '#C9C9C9'}}>
-                 320/400 
+                <Text style={{ fontSize: 16, fontWeight: 500, color: '#C9C9C9' }}>
+                  320/400
+                </Text>
+              </View>
+              <View style={styles.verticleLine}></View>
+              <View style={styles.goal_stats}>
+                <Text style={{ fontSize: 13, fontWeight: 500, color: '#666666' }}>
+                  Calories
+                </Text>
+                <Text style={{ fontSize: 16, fontWeight: 500, color: '#C9C9C9' }}>
+                  320/400
                 </Text>
               </View>
               <View style={styles.verticleLine}></View>
@@ -81,14 +79,14 @@ const Home = () => {
             </View>
           </View>
           <View style={styles.nutrition}>
-            <View style={{flexDirection: 'row', justifyContent: 'space-between', alignContent: 'end'}}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignContent: 'end' }}>
               <View>
                 <Text style={styles.header}>
                   My Nutrition
                 </Text>
               </View>
               <View>
-                <Text style={{fontSize: 15, fontWeight: 500, color: '#777777'}}>
+                <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
                   Today's Activity
                 </Text>
               </View>
@@ -96,37 +94,37 @@ const Home = () => {
             <View style={styles.nutrition_stack}>
               <View style={styles.nutrition_stats}>
                 <Image source={require('../smartplate/assets/fire-flame-curved-solid 1.png')} style={styles.nutrition_icon} />
-                
+
                 <View style={styles.nutrition_num}>
-                  <Text style={{fontSize: 30, fontWeight: 500, color: 'white'}}>
-                  320 
+                  <Text style={{ fontSize: 30, fontWeight: 500, color: 'white' }}>
+                    320
                   </Text>
-                  <Text style={{fontSize: 15, fontWeight: 500, color: '#777777'}}>
-                  kcal
+                  <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
+                    kcal
                   </Text>
                 </View>
               </View>
               <View style={styles.nutrition_stats}>
-              <Image source={require('../smartplate/assets/droplet-solid 1.png')} style={styles.nutrition_icon} />
-                
+                <Image source={require('../smartplate/assets/droplet-solid 1.png')} style={styles.nutrition_icon} />
+
                 <View style={styles.nutrition_num}>
-                  <Text style={{fontSize: 30, fontWeight: 500, color: 'white'}}>
-                  320 
+                  <Text style={{ fontSize: 30, fontWeight: 500, color: 'white' }}>
+                    320
                   </Text>
-                  <Text style={{fontSize: 15, fontWeight: 500, color: '#777777'}}>
-                  kcal
+                  <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
+                    kcal
                   </Text>
                 </View>
               </View>
               <View style={styles.nutrition_stats}>
-              <Image source={require('../smartplate/assets/bolt-lightning-solid 1.png')} style={styles.nutrition_icon} />
-                
+                <Image source={require('../smartplate/assets/bolt-lightning-solid 1.png')} style={styles.nutrition_icon} />
+
                 <View style={styles.nutrition_num}>
-                  <Text style={{fontSize: 30, fontWeight: 500, color: 'white'}}>
-                  320 
+                  <Text style={{ fontSize: 30, fontWeight: 500, color: 'white' }}>
+                    320
                   </Text>
-                  <Text style={{fontSize: 15, fontWeight: 500, color: '#777777'}}>
-                  kcal
+                  <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
+                    kcal
                   </Text>
                 </View>
               </View>
@@ -136,27 +134,24 @@ const Home = () => {
         </View>
       </View>
       <View style={styles.navbar}>
-        <View style={styles.nav_button}>
+        <TouchableOpacity onPress={() => handleNavPress('Home')} style={styles.nav_button}>
           <Image source={require('../smartplate/assets/home.png')} style={styles.nutrition_icon} />
-          <Text style={{fontSize: 12, fontWeight: 500, color: '#777777'}}>Home</Text>
-        </View>
-        <View style={styles.nav_button}>
+          <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleNavPress('Food')} style={styles.nav_button}>
           <Image source={require('../smartplate/assets/restaurant.png')} style={styles.nutrition_icon} />
-          <Text style={{fontSize: 12, fontWeight: 500, color: '#777777'}}>Food</Text>
-        </View>
-        <View style={styles.nav_button}>
+          <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleNavPress('Leaderboard')} style={styles.nav_button}>
           <Image source={require('../smartplate/assets/leaderboard.png')} style={styles.nutrition_icon} />
-          <Text style={{fontSize: 12, fontWeight: 500, color: '#777777'}}>Leaderboard</Text>
-        </View>
+          <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Leaderboard</Text>
+        </TouchableOpacity>
 
       </View>
 
-      </View>
-    
-  </NavigationContainer>
- );
+    </View>
+  );
 };
-
 
 const styles = StyleSheet.create({
  container: {

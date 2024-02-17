@@ -1,6 +1,4 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight} from 'react-native';
 
 
@@ -8,7 +6,6 @@ import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight} from 'reac
 
 const Food = () => {
  return (
-  <NavigationContainer>
     <View style={styles.container}>
         <View style={styles.container_1}>
             <View style={{flex: 1}}></View>
@@ -29,8 +26,6 @@ const Food = () => {
         </View>
 
     </View>
-    
-  </NavigationContainer>
  );
 };
 
