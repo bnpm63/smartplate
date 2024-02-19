@@ -1,45 +1,63 @@
+// Dev Modules
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // Screens
-import Home from './home'
-import Login from './login'
-import Food from './food'
-import Friends from './friends'
+import Home from './home';
+import Login from './login';
+import Food from './food';
+import Friends from './friends';
+
+// style library
+import styles from './styles';
 
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
-const PlateStack = () => {
+const PlateTab = () => {
 	return (
-		<NavigationContainer>
-			<Stack.Navigator
-            initialRouteName ="Home"
-            >
-				<Stack.Screen
-					name="Home"
-					component={Home}
-					options={{title:'Welcome'}}
-				/>
-				<Stack.Screen
-					name="Login"
-					component={Login}
-					options={{title: 'Food'}}
-				/>
-				<Stack.Screen
-					name="Friends"
-					component={Friends}
-					options={{title: 'Friends'}}
-				/>
-				<Stack.Screen
-					name="Food"
-					component={Food}
-					options={{title: 'Food'}}
-				/>
-			</Stack.Navigator>
-		</NavigationContainer>
+		<Tab.Navigator
+		>
+			<Tab.Screen
+				name="Home"
+				component={Home}
+				options={{ title: 'Welcome' }}
+			/>
+			<Tab.Screen
+				name="Login"
+				component={Login}
+				options={{ title: 'Food' }}
+			/>
+			<Tab.Screen
+				name="Friends"
+				component={Friends}
+				options={{ title: 'Friends' }}
+			/>
+			<Tab.Screen
+				name="Food"
+				component={Food}
+				options={{ title: 'Food' }}
+			/>
+		</Tab.Navigator>
 	);
 };
 
-export default PlateStack;
+export default PlateTab;
+
+
+// THIS IS THE ORIGINAL STYLE OF THE NON FUNCTIONAL TAB-bar
+      {/* <View style={styles.navbar}>
+        <TouchableOpacity onPress={() => handleNavPress('Home')} style={styles.nav_button}>
+          <Image source={require('../smartplate/assets/home.png')} style={styles.nutrition_icon} />
+          <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Home</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleNavPress('Food')} style={styles.nav_button}>
+          <Image source={require('../smartplate/assets/restaurant.png')} style={styles.nutrition_icon} />
+          <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => handleNavPress('Leaderboard')} style={styles.nav_button}>
+          <Image source={require('../smartplate/assets/leaderboard.png')} style={styles.nutrition_icon} />
+          <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Leaderboard</Text>
+        </TouchableOpacity>
+
+      </View> */}

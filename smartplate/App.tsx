@@ -1,17 +1,16 @@
 // Dev Modules
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 
 // Screens
-import Home from './home'
-import Login from './login'
-import Food from './food'
-import Friends from './friends'
-import PlateStack from './stack'
+import PlateTabs from './stack'
 
+// Root
 const App = () => {
 	return (
-		<PlateStack/>
+		<NavigationContainer>
+			<PlateTabs/>
+		</NavigationContainer>
 	);
 };
 

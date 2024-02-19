@@ -1,11 +1,11 @@
+// Dev modules
 import React from 'react';
 import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight, TouchableOpacity} from 'react-native';
 
-const Home = ({ navigation }) => {
-  const handleNavPress = (buttonId) => {
-    navigation.navigate(buttonId);
-  };
+// Our Libraries
+import styles from './styles';
 
+const Home = () => {
   return (
     <View style={styles.container}>
       <View style={styles.container_1}>
@@ -133,164 +133,11 @@ const Home = ({ navigation }) => {
           </View>
         </View>
       </View>
-      <View style={styles.navbar}>
-        <TouchableOpacity onPress={() => handleNavPress('Home')} style={styles.nav_button}>
-          <Image source={require('../smartplate/assets/home.png')} style={styles.nutrition_icon} />
-          <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => handleNavPress('Food')} style={styles.nav_button}>
-          <Image source={require('../smartplate/assets/restaurant.png')} style={styles.nutrition_icon} />
-          <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Food</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => handleNavPress('Leaderboard')} style={styles.nav_button}>
-          <Image source={require('../smartplate/assets/leaderboard.png')} style={styles.nutrition_icon} />
-          <Text style={{ fontSize: 12, fontWeight: 500, color: '#777777' }}>Leaderboard</Text>
-        </TouchableOpacity>
 
-      </View>
 
     </View>
   );
 };
-
-const styles = StyleSheet.create({
- container: {
-  backgroundColor: 'black',
-  flex: 1,
- },
-
- container_1: {
-   flexDirection: 'column',
-   flex: 10,
-   marginTop: 75,
-   marginBottom: 30,
-   marginLeft: 30,
-   marginRight: 30, 
- },
-
- navbar: {
-  backgroundColor: '#131313',
-  flex: 1,
-  justifyContent: 'space-around',
-  flexDirection: 'row',
-  alignItems: 'center',
-  paddingBottom: 8,
- },
-
-stats: {
-  flexDirection: 'row',
-  flex: 2,
- },
-
- pfp: {
-  height: 35,
-  width : 35,
-  borderRadius: 10,
-  marginRight: 15,
- },
-
- goals: {
-  flex: 2,
- },
-
- nutrition: {
-  paddingTop: 30,
-  flex: 5,
- },
-
- settings_lines: {
-  backgroundColor: '#909090',
-  width: 14,
-  height: 1,
- },
- 
- goal_stats: {
-  flex: 1,
-  flexDirection: 'column',
-  justifyContent: 'center',
-  paddingLeft: 10,
- },
-
- progress: {
-  flex: 6,
-  flexDirection: 'column',
-  justifyContent: 'space-evenly',
- },
-
- lower: {
-  flex: 6,
- },
-
- top_nav: {
-  flex: 1,
-  flexDirection: 'row',
- },
-
- header: {
-  color: 'white',
-  fontSize: 22,
-  fontWeight: 'bold',
- },
-
- user: {
-  flex: 1,
-  flexDirection: 'row',
- },
- 
- username: {
-
- },
-
- nav_button: {
-  flex: 1,
-  flexDirection: 'column',
-  alignItems: 'center',
- },
-
- settings: {
-  height: 35,
-  width : 35,
-  borderRadius: 35,
-  borderWidth: 1,
-  borderColor: '#464646',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'space-evenly',
- },
-
- goal_stack: {
-  flexDirection: 'row',
-  marginTop: 25,
-  justifyContent: 'space-between',
- },
-
- verticleLine: {
-  height: 50,
-  width: 1.5,
-  backgroundColor: '#4D4D4D',
-},
-
-nutrition_stack: {
-  flexDirection: 'row',
-  flex: 1,
-  marginTop: 25,
-  justifyContent: 'space-between',
-},
-
-nutrition_stats: {
-  backgroundColor: '#121212',
-  borderRadius: 10,
-  width: '30%',
-  flexDirection: 'column',
-  justifyContent: 'space-around',
-  paddingLeft: 15,
-},
-
-nutrition_icon: {
-},
-
-});
-
 
 export default Home;
 
