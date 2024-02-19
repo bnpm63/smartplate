@@ -11,15 +11,8 @@ import PlateStack from './stack'
 
 const App = () => {
 	return (
-		<NavigationContainer>
-			<PlateStack/>
-		</NavigationContainer>
+		<PlateStack/>
 	);
 };
 
 export default App;
-
-
-
-
-
