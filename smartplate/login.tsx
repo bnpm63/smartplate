@@ -1,6 +1,4 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight} from 'react-native';
 
 
@@ -23,11 +21,11 @@ const Login = () => {
                 <View style={{alignItems: 'center', justifyContent: 'space-around', flex: 1}}>
                     <View style={styles.login_button}>
                         <Image source={require('../smartplate/assets/free-google-1772223-1507807.webp')} style={{}} />
-                        <Text style={{color: 'EDEDED', fontSize: '13', fontWeight: '300'}}> Sign in with Google</Text>
+                        <Text style={{color: '#EDEDED', fontSize: 13, fontWeight: '300'}}> Sign in with Google</Text>
                     </View>
                     <View style={styles.login_button}>
                         <Image source={require('../smartplate/assets/user-solid.svg')} style={{}} />
-                        <Text style={{color: 'EDEDED', fontSize: '13', fontWeight: '300'}}> Sign in with Google</Text>
+                        <Text style={{color: '#EDEDED', fontSize: 13, fontWeight: '300'}}> Sign in with Google</Text>
                     </View>
                 </View>
 
