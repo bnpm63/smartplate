@@ -23,11 +23,15 @@ const Login = () => {
                 <View style={{alignItems: 'center', justifyContent: 'space-around', flex: 1}}>
                     <View style={styles.login_button}>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <Image source={require('../smartplate/assets/free-google-1772223-1507807.webp')} style={{height: 35, width : 35}} />
+=======
+                        <Image source={require('../smartplate/assets/free-google-1772223-1507807.webp')} style={{}} />
+>>>>>>> parent of a50e1db (fixed login icons)
                         <Text style={{color: 'EDEDED', fontSize: '13', fontWeight: '300'}}> Sign in with Google</Text>
                     </View>
                     <View style={styles.login_button}>
-                        <Image source={require('../smartplate/assets/user-solid.svg')} style={{height: 35, width : 35}} />
+                        <Image source={require('../smartplate/assets/user-solid.svg')} style={{}} />
                         <Text style={{color: 'EDEDED', fontSize: '13', fontWeight: '300'}}> Sign in with Google</Text>
 =======
                         <Image source={require('../smartplate/assets/free-google-1772223-1507807.webp')} style={{}} />
