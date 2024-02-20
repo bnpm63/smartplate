@@ -25,6 +25,9 @@ const Login = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 384cb86 (changed imports)
 =======
 >>>>>>> parent of 384cb86 (changed imports)
                         <Image source={require('../smartplate/assets/free-google-1772223-1507807.webp')} style={{height: 35, width : 35}} />
