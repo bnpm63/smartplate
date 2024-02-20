@@ -24,8 +24,8 @@ const PlateTab = () => {
 				options={{ title: 'Welcome' }}
 			/>
 			<Tab.Screen
-				name="Login"
-				component={Login}
+				name="Food"
+				component={Food}
 				options={{ title: 'Food' }}
 			/>
 			<Tab.Screen
@@ -34,9 +34,9 @@ const PlateTab = () => {
 				options={{ title: 'Friends' }}
 			/>
 			<Tab.Screen
-				name="Food"
-				component={Food}
-				options={{ title: 'Food' }}
+				name="Login"
+				component={Login}
+				options={{ title: 'Login' }}
 			/>
 		</Tab.Navigator>
 	);
