@@ -1,7 +1,21 @@
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight} from 'react-native';
 
 
+// import firebase from 'firebase/app';
+// import 'firebase/auth';
+
+// const signInWithGoogle = async () => {
+//   const provider = new firebase.auth.GoogleAuthProvider();
+//   try {
+//     await firebase.auth().signInWithPopup(provider);
+//     // User signed in successfully
+//   } catch (error) {
+//     // Handle errors
+//   }
+// };
 
 
 const Login = () => {
