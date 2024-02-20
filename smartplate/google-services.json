@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "527197986736",
+    "project_id": "smartplate-7c1bf",
+    "storage_bucket": "smartplate-7c1bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527197986736:android:da34e561a8c5f5b1ecc075",
+        "android_client_info": {
+          "package_name": "com.smartplate.smartplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527197986736-pom96g9jd04drtie4t453q4p4tbr5pqa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smartplate.smartplate",
+            "certificate_hash": "c68cc29cec26cd408e1406cba247348d45266181"
+          }
+        },
+        {
+          "client_id": "527197986736-pfoliholeudrt29lcef6vp129fufqcq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCJ8YMxW1w36F7JEKDSDtue6_T5RJDufY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527197986736-pfoliholeudrt29lcef6vp129fufqcq2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "527197986736-1hjv06tfs1duqj7l3ek7oidqqvdcp4po.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.smartplate.smartplate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
