@@ -59,13 +59,13 @@ const styles = StyleSheet.create({
     },
    
     progress: {
-     flex: 6,
+     flex: 5,
      flexDirection: 'column',
      justifyContent: 'space-evenly',
     },
    
     lower: {
-     flex: 6,
+     flex: 7,
     },
    
     top_nav: {
