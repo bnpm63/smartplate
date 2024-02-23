@@ -16,9 +16,13 @@ const PlateTab = () => {
 	return (
 		<Tab.Navigator
 			screenOptions={{
-				tabBarStyle: { backgroundColor: '#131313' },
-				headerShown: false, // Add this line to hide the header
-			  }}
+				tabBarActiveTintColor: '#000000',
+				tabBarInactiveTintColor: '#FFFFFF',
+				tabBarActiveBackgroundColor: '#777777',
+				tabBarInactiveBackgroundColor: '#777777',
+
+				headerShown: false,
+			}}
 		>
 			<Tab.Screen
 				name="Home"
