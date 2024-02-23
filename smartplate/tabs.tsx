@@ -1,5 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Image } from 'react-native';
 
 // Screens
 import Home from './home';
@@ -18,8 +19,8 @@ const PlateTab = () => {
 			screenOptions={{
 				tabBarActiveTintColor: '#000000',
 				tabBarInactiveTintColor: '#FFFFFF',
-				tabBarActiveBackgroundColor: '#777777',
-				tabBarInactiveBackgroundColor: '#777777',
+				tabBarActiveBackgroundColor: '#333333',
+				tabBarInactiveBackgroundColor: '#222222',
 
 				headerShown: false,
 			}}
@@ -27,21 +28,60 @@ const PlateTab = () => {
 			<Tab.Screen
 				name="Home"
 				component={Home}
+				options={{ 
+					title: 'Home',
+
+					tabBarIcon: () => (
+						<Image
+							source = {require('./assets/home.png')}
+							style={{width: 10, height: 10}}
+						/>
+					), 
+			
+				}}
 			/>
 			<Tab.Screen
 				name="Food"
 				component={Food}
-				options={{ title: 'Food' }}
+				options={{ 
+					title: 'Food',
+
+					tabBarIcon: () => (
+						<Image
+							source = {require('./assets/restaurant.png')}
+							style={{width: 10, height: 10}}
+						/>
+					), 
+			
+				}}
 			/>
 			<Tab.Screen
 				name="Friends"
 				component={Friends}
-				options={{ title: 'Friends' }}
+				options={{ 
+					title: 'Friends',
+					tabBarIcon: () => (
+						<Image
+							source = {require('./assets/leaderboard.png')}
+							style={{width: 10, height: 10}}
+						/>
+					), 
+				}}
 			/>
 			<Tab.Screen
 				name="Login"
 				component={Login}
-				options={{ title: 'Login' }}
+				options={{ 
+					title: 'Login',
+
+					tabBarIcon: () => (
+						<Image
+							source = {require('./assets/favicon.png')}
+							style={{width: 10, height: 10}}
+						/>
+					), 
+			
+				}}
 			/>
 			
 			
