@@ -1,4 +1,3 @@
-// Dev Modules
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -11,21 +10,23 @@ import Friends from './friends';
 // style library
 import styles from './styles';
 
-
 const Tab = createBottomTabNavigator();
 
 const PlateTab = () => {
 	return (
 		<Tab.Navigator
+			screenOptions={{
+				tabBarStyle: { backgroundColor: '#131313' },
+				headerShown: false, // Add this line to hide the header
+			  }}
 		>
 			<Tab.Screen
 				name="Home"
 				component={Home}
-				options={{ title: 'Welcome' }}
 			/>
 			<Tab.Screen
-				name="Login"
-				component={Login}
+				name="Food"
+				component={Food}
 				options={{ title: 'Food' }}
 			/>
 			<Tab.Screen
@@ -34,15 +35,18 @@ const PlateTab = () => {
 				options={{ title: 'Friends' }}
 			/>
 			<Tab.Screen
-				name="Food"
-				component={Food}
-				options={{ title: 'Food' }}
+				name="Login"
+				component={Login}
+				options={{ title: 'Login' }}
 			/>
+			
+			
 		</Tab.Navigator>
 	);
 };
 
 export default PlateTab;
+
 
 
 // THIS IS THE ORIGINAL STYLE OF THE NON FUNCTIONAL TAB-bar

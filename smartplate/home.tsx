@@ -1,11 +1,14 @@
 // Dev modules
 import React from 'react';
 import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight, TouchableOpacity} from 'react-native';
-
+import { useGoals } from './GoalsContext';
 // Our Libraries
 import styles from './styles';
 
-const Home = () => {
+
+const Home: React.FC = () => {
+  const { calGoal, fatGoal, carbGoal } = useGoals();
+  console.log({ calGoal, fatGoal, carbGoal });
   return (
     <View style={styles.container}>
       <View style={styles.container_1}>
@@ -97,7 +100,7 @@ const Home = () => {
 
                 <View style={styles.nutrition_num}>
                   <Text style={{ fontSize: 30, fontWeight: 500, color: 'white' }}>
-                    320
+                    {calGoal}
                   </Text>
                   <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
                     kcal
@@ -109,10 +112,10 @@ const Home = () => {
 
                 <View style={styles.nutrition_num}>
                   <Text style={{ fontSize: 30, fontWeight: 500, color: 'white' }}>
-                    320
+                    {fatGoal}
                   </Text>
                   <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
-                    kcal
+                    g
                   </Text>
                 </View>
               </View>
@@ -121,10 +124,10 @@ const Home = () => {
 
                 <View style={styles.nutrition_num}>
                   <Text style={{ fontSize: 30, fontWeight: 500, color: 'white' }}>
-                    320
+                    {carbGoal}
                   </Text>
                   <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
-                    kcal
+                    g
                   </Text>
                 </View>
               </View>
