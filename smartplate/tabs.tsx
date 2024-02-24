@@ -6,7 +6,7 @@ import { Image } from 'react-native';
 import Home from './home';
 import Login from './login';
 import Food from './food';
-import Friends from './friends';
+import Leaderboard from './leaderboard';
 
 // style library
 import styles from './styles';
@@ -56,10 +56,10 @@ const PlateTab = () => {
 				}}
 			/>
 			<Tab.Screen
-				name="Friends"
-				component={Friends}
+				name="Leaderboard"
+				component={Leaderboard}
 				options={{ 
-					title: 'Friends',
+					title: 'Leaderboard',
 					tabBarIcon: () => (
 						<Image
 							source = {require('./assets/leaderboard.png')}
@@ -67,23 +67,7 @@ const PlateTab = () => {
 						/>
 					), 
 				}}
-			/>
-			<Tab.Screen
-				name="Login"
-				component={Login}
-				options={{ 
-					title: 'Login',
-
-					tabBarIcon: () => (
-						<Image
-							source = {require('./assets/favicon.png')}
-							style={{width: 10, height: 10}}
-						/>
-					), 
-			
-				}}
-			/>
-			
+			/>			
 			
 		</Tab.Navigator>
 	);
