@@ -1,14 +1,36 @@
 // Dev modules
-import React from 'react';
-import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight, TouchableOpacity} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import {StyleSheet, View, Text, Pressable, Image, TouchableHighlight, TouchableOpacity } from 'react-native';
 import { useGoals } from './GoalsContext';
 // Our Libraries
 import styles from './styles';
 
 
 const Home: React.FC = () => {
+
   const { calGoal, fatGoal, carbGoal } = useGoals();
-  console.log({ calGoal, fatGoal, carbGoal });
+  const [totalCal, setTotalCal] = useState(0); // Accumulator for calories
+  const [totalFat, setTotalFat] = useState(0); // Accumulator for fat
+  const [totalCarb, setTotalCarb] = useState(0); // Accumulator for carbs
+
+  useEffect(() => {
+    const calGoalNumber = Number(calGoal) || 0;
+    setTotalCal(prevTotal => prevTotal + calGoalNumber);
+  }, [calGoal]);
+
+  useEffect(() => {
+    const fatGoalNumber = Number(fatGoal) || 0;
+    setTotalFat(prevTotal => prevTotal + fatGoalNumber);
+  }, [fatGoal]);
+
+  useEffect(() => {
+    const carbGoalNumber = Number(carbGoal) || 0;
+    setTotalCarb(prevTotal => prevTotal + carbGoalNumber);
+  }, [carbGoal]);
+
+
+
+
   return (
     <View style={styles.container}>
       <View style={styles.container_1}>
@@ -56,25 +78,25 @@ const Home: React.FC = () => {
                   Calories
                 </Text>
                 <Text style={{ fontSize: 16, fontWeight: 500, color: '#C9C9C9' }}>
-                  320/400
+                  {totalCal}/{calGoal}
                 </Text>
               </View>
               <View style={styles.verticleLine}></View>
               <View style={styles.goal_stats}>
                 <Text style={{ fontSize: 13, fontWeight: 500, color: '#666666' }}>
-                  Calories
+                  Protein
                 </Text>
                 <Text style={{ fontSize: 16, fontWeight: 500, color: '#C9C9C9' }}>
-                  320/400
+                  {totalFat}/{fatGoal}
                 </Text>
               </View>
               <View style={styles.verticleLine}></View>
               <View style={styles.goal_stats}>
                 <Text style={{ fontSize: 13, fontWeight: 500, color: '#666666' }}>
-                  Calories
+                  Carbohydrates
                 </Text>
                 <Text style={{ fontSize: 16, fontWeight: 500, color: '#C9C9C9' }}>
-                  320/400
+                  {totalCarb}/{carbGoal}
                 </Text>
               </View>
               <View style={styles.verticleLine}></View>
@@ -100,7 +122,7 @@ const Home: React.FC = () => {
 
                 <View style={styles.nutrition_num}>
                   <Text style={{ fontSize: 30, fontWeight: 500, color: 'white' }}>
-                    {calGoal}
+                    {totalCal}
                   </Text>
                   <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
                     kcal
@@ -112,7 +134,7 @@ const Home: React.FC = () => {
 
                 <View style={styles.nutrition_num}>
                   <Text style={{ fontSize: 30, fontWeight: 500, color: 'white' }}>
-                    {fatGoal}
+                    {totalFat}
                   </Text>
                   <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
                     g
@@ -124,7 +146,7 @@ const Home: React.FC = () => {
 
                 <View style={styles.nutrition_num}>
                   <Text style={{ fontSize: 30, fontWeight: 500, color: 'white' }}>
-                    {carbGoal}
+                    {totalCarb}
                   </Text>
                   <Text style={{ fontSize: 15, fontWeight: 500, color: '#777777' }}>
                     g
