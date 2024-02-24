@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 // Screens
 import PlateTabs from './tabs';
 import { GoalsProvider } from './GoalsContext';
+import MainStack from './mainstack';
 
 // Root
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
     <GoalsProvider>
       <NavigationContainer>
         <PlateTabs />
+        <MainStack />
       </NavigationContainer>
     </GoalsProvider>
   );

@@ -34,7 +34,7 @@ const PlateTab = () => {
 					tabBarIcon: () => (
 						<Image
 							source = {require('./assets/home.png')}
-							style={{width: 10, height: 10}}
+							style={{width: 30, height: 30}}
 						/>
 					), 
 			
@@ -49,7 +49,7 @@ const PlateTab = () => {
 					tabBarIcon: () => (
 						<Image
 							source = {require('./assets/restaurant.png')}
-							style={{width: 10, height: 10}}
+							style={{width: 30, height: 30}}
 						/>
 					), 
 			
@@ -63,7 +63,7 @@ const PlateTab = () => {
 					tabBarIcon: () => (
 						<Image
 							source = {require('./assets/leaderboard.png')}
-							style={{width: 10, height: 10}}
+							style={{width: 30, height: 30}}
 						/>
 					), 
 				}}
@@ -77,7 +77,7 @@ const PlateTab = () => {
 					tabBarIcon: () => (
 						<Image
 							source = {require('./assets/favicon.png')}
-							style={{width: 10, height: 10}}
+							style={{width: 30, height: 30}}
 						/>
 					), 
 			
