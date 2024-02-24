@@ -15,13 +15,14 @@ const Food: React.FC = () => {
   const [pro, setPro] = useState<number | ''>('');
   const [carb, setCarb] = useState<number | ''>('');
   const [tasks, setTasks] = useState<Task[]>([]);
-  const [calGoal, setCalGoal] = useState<number | ''>('');
-  const [fatGoal, setFatGoal] = useState<number | ''>('');
-  const [carbGoal, setCarbGoal] = useState<number | ''>('');
+  const { setCalGoal, setFatGoal, setCarbGoal } = useGoals();
+  const [calInput, setCalInput] = useState('');
+  const [fatInput, setFatInput] = useState('');
+  const [carbInput, setCarbInput] = useState('');
 
   const currentDate = new Date();
   const formattedDate = `${currentDate.getMonth() + 1}-${currentDate.getDate()}-${currentDate.getFullYear()}`;
-
+``
 
   const addTask = () => {
     if (meal.length <= 30 && typeof cal === 'number' && typeof pro === 'number' && typeof carb === 'number') {
@@ -48,19 +49,9 @@ const Food: React.FC = () => {
 
   const handleSetGoals = () => {
 
-    if (calGoal && fatGoal && carbGoal && !isNaN(calGoal) && !isNaN(fatGoal) && !isNaN(carbGoal)) {
-
-      setCalGoal(calGoal);
-      setFatGoal(fatGoal);
-      setCarbGoal(carbGoal);
-      
-      
-  
-
-      alert(`Goals updated: Calories - ${calGoal}, Protein - ${fatGoal}, Carbs - ${carbGoal}`);
-    } else {
-      alert('Please enter valid goal numbers for all fields.');
-    }
+    setCalGoal(parseInt(calInput) || 0);
+    setFatGoal(parseInt(fatInput) || 0);
+    setCarbGoal(parseInt(carbInput) || 0);
   };
   
   
@@ -156,8 +147,8 @@ const Food: React.FC = () => {
             style={styles.squareInput}
             placeholder="Calories"
             placeholderTextColor="#393939"
-            value={calGoal.toString()}
-            onChangeText={(text) => handleNumericInput(text, setCalGoal)}
+            value={calInput}
+            onChangeText={setCalInput}
             keyboardType="numeric"
           />
         </View>
@@ -167,8 +158,8 @@ const Food: React.FC = () => {
             style={styles.squareInput}
             placeholder="Protein"
             placeholderTextColor="#393939"
-            value={fatGoal.toString()}
-            onChangeText={(text) => handleNumericInput(text, setFatGoal)}
+            value={fatInput}
+            onChangeText={setFatInput}
             keyboardType="numeric"
           />
         </View>
@@ -178,8 +169,8 @@ const Food: React.FC = () => {
             style={styles.squareInput}
             placeholder="Carbs"
             placeholderTextColor="#393939"
-            value={carbGoal.toString()}
-            onChangeText={(text) => handleNumericInput(text, setCarbGoal)}
+            value={carbInput}
+            onChangeText={setCarbInput}
             keyboardType="numeric"
           />
         </View>

@@ -10,10 +10,10 @@ interface GoalsContextState {
   setCarbGoal: React.Dispatch<React.SetStateAction<number | ''>>;
 }
 
-// Create the context
+
 const GoalsContext = createContext<GoalsContextState | undefined>(undefined);
 
-// Create a custom hook for using the goals context
+
 export const useGoals = () => {
   const context = useContext(GoalsContext);
   if (context === undefined) {
@@ -22,11 +22,18 @@ export const useGoals = () => {
   return context;
 };
 
-// Provider component
+
 export const GoalsProvider: React.FC = ({ children }) => {
   const [calGoal, setCalGoal] = useState<number | ''>('');
   const [fatGoal, setFatGoal] = useState<number | ''>('');
   const [carbGoal, setCarbGoal] = useState<number | ''>('');
+  const [totalCal, setTotalCal] = useState(0);
+  const [totalFat, setTotalFat] = useState(0);
+  const [totalCarb, setTotalCarb] = useState(0);
+
+  const addToTotalCal = (amount: number) => setTotalCal(prev => prev + amount);
+  const addToTotalFat = (amount: number) => setTotalFat(prev => prev + amount);
+  const addToTotalCarb = (amount: number) => setTotalCarb(prev => prev + amount);
 
   return (
     <GoalsContext.Provider value={{ calGoal, setCalGoal, fatGoal, setFatGoal, carbGoal, setCarbGoal }}>
