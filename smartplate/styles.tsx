@@ -146,6 +146,38 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     flexDirection: 'column',
     flex: 6,
+  },
+
+  entry_text: {
+    fontSize: 12,
+    color: 'white',
+    fontWeight: '600',
+  },
+
+  row_entry: {
+    flexDirection: 'row',
+    flex: 1,
+  },
+
+  rank_num: {
+    flex: 1,
+    color: 'white',
+     fontSize: 13,
+     fontWeight: 'bold',
+  },
+
+  rank_name: {
+    flex: 8,
+    color: 'white',
+     fontSize: 13,
+     fontWeight: 'bold',
+  },
+
+  rank_trophy: {
+    flex: 1,
+    color: 'white',
+     fontSize: 13,
+     fontWeight: 'bold',
   }
    
    });

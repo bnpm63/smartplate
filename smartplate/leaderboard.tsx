@@ -39,7 +39,12 @@ const Leaderboard = () => {
 
 				{/*Leaderboard body*/}
 				<View style={styles.leaderboard_body}>
-					<Text style={styles.header}>Hello</Text>
+				<Text style={styles.header}>Leaderboard</Text>
+					<View style={styles.row_entry}>
+						<Text style={styles.rank_num}>1.</Text>
+						<Text style={styles.rank_name}>Ben</Text>
+						<Text style={styles.rank_trophy}>951</Text>
+					</View>
 				</View>
 
 

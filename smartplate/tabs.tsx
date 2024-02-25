@@ -67,28 +67,7 @@ const PlateTab = () => {
 						/>
 					), 
 				}}
-<<<<<<< HEAD
-			/>
-			<Tab.Screen
-				name="Login"
-				component={Login}
-				options={{ 
-					title: 'Login',
-
-					tabBarIcon: () => (
-						<Image
-							source = {require('./assets/favicon.png')}
-							style={{width: 30, height: 30}}
-						/>
-					), 
-			
-				}}
-			/>
-			
-=======
-			/>			
->>>>>>> main
-			
+			/>				
 		</Tab.Navigator>
 	);
 };
