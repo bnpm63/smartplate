@@ -3,8 +3,13 @@ import { StyleSheet, View, Text, Pressable, Image, TouchableHighlight, Touchable
 
 import styles from './styles';
 
+// Debug data
+import LB_DebugData from './assets/debug_data';
+
+
 const Leaderboard = () => {
 
+	const LB_Data = LB_DebugData;
 
 	return (
 		// Main container
@@ -39,12 +44,15 @@ const Leaderboard = () => {
 
 				{/*Leaderboard body*/}
 				<View style={styles.leaderboard_body}>
-				<Text style={styles.header}>Leaderboard</Text>
-					<View style={styles.row_entry}>
-						<Text style={styles.rank_num}>1.</Text>
-						<Text style={styles.rank_name}>Ben</Text>
-						<Text style={styles.rank_trophy}>951</Text>
-					</View>
+					{
+						LB_Data.Ranks.map((rank, index) => (
+							<View key={rank} style={styles.row_entry}>
+								<Text style={styles.rank_num}>{rank}</Text>
+								<Text style={styles.rank_name}>{LB_Data.Names[index]}</Text>
+								<Text style={styles.rank_trophy}>{LB_Data.Points[index]}</Text>
+							</View>		
+						))
+					}
 				</View>
 
 
@@ -54,5 +62,6 @@ const Leaderboard = () => {
 		</View>
 	);
 }
+
 
 export default Leaderboard;

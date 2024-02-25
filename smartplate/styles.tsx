@@ -156,6 +156,7 @@ const styles = StyleSheet.create({
 
   row_entry: {
     flexDirection: 'row',
+    justifyContent: 'flex-start',
     flex: 1,
   },
 
@@ -174,10 +175,10 @@ const styles = StyleSheet.create({
   },
 
   rank_trophy: {
-    flex: 1,
+    flex: 2,
     color: 'white',
-     fontSize: 14,
-     fontWeight: 'bold',
+    fontSize: 14,
+    fontWeight: 'bold',
   }
    
    });
