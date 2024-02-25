@@ -135,6 +135,18 @@ const styles = StyleSheet.create({
    
    nutrition_icon: {
    },
+
+   header_container: {
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    flex: 1,
+  },
+
+  leaderboard_body: {
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    flex: 6,
+  }
    
    });
 
