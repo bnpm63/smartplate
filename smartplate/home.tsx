@@ -5,6 +5,8 @@ import { useGoals } from './GoalsContext';
 // Our Libraries
 import styles from './styles';
 
+import SettingsButton from './settingsbutton'
+
 
 const Home: React.FC = () => {
 
@@ -46,10 +48,7 @@ const Home: React.FC = () => {
               </Text>
             </View>
           </View>
-          <View style={styles.settings}>
-            <View style={styles.settings_lines}></View>
-            <View style={styles.settings_lines}></View>
-          </View>
+          <SettingsButton/>
         </View>
 
         <View style={styles.progress}>
