@@ -162,21 +162,21 @@ const styles = StyleSheet.create({
   rank_num: {
     flex: 1,
     color: 'white',
-     fontSize: 13,
+     fontSize: 14,
      fontWeight: 'bold',
   },
 
   rank_name: {
     flex: 8,
     color: 'white',
-     fontSize: 13,
+     fontSize: 14,
      fontWeight: 'bold',
   },
 
   rank_trophy: {
     flex: 1,
     color: 'white',
-     fontSize: 13,
+     fontSize: 14,
      fontWeight: 'bold',
   }
    
