@@ -36,10 +36,14 @@ const Leaderboard = () => {
           <Text style={styles.header}>Leaderboard</Text>
         </View>
 
+
 				{/*Leaderboard body*/}
 				<View style={styles.leaderboard_body}>
 					<Text style={styles.header}>Hello</Text>
 				</View>
+
+
+
 
 			</View>
 		</View>
