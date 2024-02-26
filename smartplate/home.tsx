@@ -9,25 +9,21 @@ import styles from './styles';
 const Home: React.FC = () => {
 
   const { calGoal, fatGoal, carbGoal } = useGoals();
-  const [totalCal, setTotalCal] = useState(0); // Accumulator for calories
-  const [totalFat, setTotalFat] = useState(0); // Accumulator for fat
-  const [totalCarb, setTotalCarb] = useState(0); // Accumulator for carbs
+  const { totalCal, totalFat, totalCarb } = useGoals();
 
-  useEffect(() => {
-    const calGoalNumber = Number(calGoal) || 0;
-    setTotalCal(prevTotal => prevTotal + calGoalNumber);
-  }, [calGoal]);
+  const calculateCompletion = (total: number, goal: number) => {
+    if (goal > 0) {
+      return (total / goal) * 100;
+    }
+    return 0;
+  };
 
-  useEffect(() => {
-    const fatGoalNumber = Number(fatGoal) || 0;
-    setTotalFat(prevTotal => prevTotal + fatGoalNumber);
-  }, [fatGoal]);
+  const calCompletion = calculateCompletion(totalCal, calGoal);
+  const fatCompletion = calculateCompletion(totalFat, fatGoal);
+  const carbCompletion = calculateCompletion(totalCarb, carbGoal);
 
-  useEffect(() => {
-    const carbGoalNumber = Number(carbGoal) || 0;
-    setTotalCarb(prevTotal => prevTotal + carbGoalNumber);
-  }, [carbGoal]);
-
+  const totalCompletion = (calCompletion + fatCompletion + carbCompletion) / 3;
+  
 
 
 
@@ -59,7 +55,7 @@ const Home: React.FC = () => {
           </Text>
           <View style={styles.stats}>
             <View style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
-              <Text style={{ fontSize: 100, fontWeight: 600, color: 'white' }}>74%</Text>
+              <Text style={{ fontSize: 100, fontWeight: 600, color: 'white' }}>{totalCompletion.toFixed(2)}%</Text>
               <Text style={{ fontSize: 20, fontWeight: 500, color: '#666666', marginBottom: 20, marginLeft: 10 }}>completed</Text>
             </View>
           </View>

@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext } from 'react';
 
-// Define the shape of the context's state
+// Extend the context's state to include total values
 interface GoalsContextState {
   calGoal: number | '';
   setCalGoal: React.Dispatch<React.SetStateAction<number | ''>>;
@@ -8,11 +8,15 @@ interface GoalsContextState {
   setFatGoal: React.Dispatch<React.SetStateAction<number | ''>>;
   carbGoal: number | '';
   setCarbGoal: React.Dispatch<React.SetStateAction<number | ''>>;
+  totalCal: number;
+  addToTotalCal: (amount: number) => void;
+  totalFat: number;
+  addToTotalFat: (amount: number) => void;
+  totalCarb: number;
+  addToTotalCarb: (amount: number) => void;
 }
 
-
 const GoalsContext = createContext<GoalsContextState | undefined>(undefined);
-
 
 export const useGoals = () => {
   const context = useContext(GoalsContext);
@@ -21,7 +25,6 @@ export const useGoals = () => {
   }
   return context;
 };
-
 
 export const GoalsProvider: React.FC = ({ children }) => {
   const [calGoal, setCalGoal] = useState<number | ''>('');
@@ -36,8 +39,17 @@ export const GoalsProvider: React.FC = ({ children }) => {
   const addToTotalCarb = (amount: number) => setTotalCarb(prev => prev + amount);
 
   return (
-    <GoalsContext.Provider value={{ calGoal, setCalGoal, fatGoal, setFatGoal, carbGoal, setCarbGoal }}>
+    <GoalsContext.Provider value={{ 
+      calGoal, setCalGoal, 
+      fatGoal, setFatGoal, 
+      carbGoal, setCarbGoal, 
+      totalCal, addToTotalCal, 
+      totalFat, addToTotalFat, 
+      totalCarb, addToTotalCarb 
+    }}>
       {children}
     </GoalsContext.Provider>
   );
 };
+
+export default GoalsProvider;

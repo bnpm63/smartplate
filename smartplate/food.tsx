@@ -16,6 +16,7 @@ const Food: React.FC = () => {
   const [carb, setCarb] = useState<number | ''>('');
   const [tasks, setTasks] = useState<Task[]>([]);
   const { setCalGoal, setFatGoal, setCarbGoal } = useGoals();
+  const { addToTotalCal, addToTotalFat, addToTotalCarb } = useGoals();
   const [calInput, setCalInput] = useState('');
   const [fatInput, setFatInput] = useState('');
   const [carbInput, setCarbInput] = useState('');
@@ -24,17 +25,25 @@ const Food: React.FC = () => {
   const formattedDate = `${currentDate.getMonth() + 1}-${currentDate.getDate()}-${currentDate.getFullYear()}`;
 ``
 
-  const addTask = () => {
-    if (meal.length <= 30 && typeof cal === 'number' && typeof pro === 'number' && typeof carb === 'number') {
-      setTasks([...tasks, { meal, cal, pro, carb }]);
-      setMeal('');
-      setCal('');
-      setPro('');
-      setCarb('');
-    } else {
-      alert('All fields should be properly filled. Meal should be less than 30 characters. Calories, Protein, and Carbs should be whole numbers.');
-    }
-  };
+const addTask = () => {
+  if (meal && cal && pro && carb) {
+    const newTask = { meal, cal, pro, carb };
+    setTasks([...tasks, newTask]);
+
+    // Update total values
+    addToTotalCal(cal);
+    addToTotalFat(pro);
+    addToTotalCarb(carb);
+
+    // Reset the input fields
+    setMeal('');
+    setCal('');
+    setPro('');
+    setCarb('');
+  } else {
+    alert('All fields should be properly filled. Meal should be less than 30 characters. Calories, Protein, and Carbs should be whole numbers.');
+  }
+};
 
   const handleNumericInput = (value: string, setter: React.Dispatch<React.SetStateAction<number | ''>>) => {
     if (!value) {
