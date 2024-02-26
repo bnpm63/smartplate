@@ -135,6 +135,51 @@ const styles = StyleSheet.create({
    
    nutrition_icon: {
    },
+
+   header_container: {
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    flex: 1,
+  },
+
+  leaderboard_body: {
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    flex: 6,
+  },
+
+  entry_text: {
+    fontSize: 12,
+    color: 'white',
+    fontWeight: '600',
+  },
+
+  row_entry: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    flex: 1,
+  },
+
+  rank_num: {
+    flex: 1,
+    color: 'white',
+     fontSize: 14,
+     fontWeight: 'bold',
+  },
+
+  rank_name: {
+    flex: 8,
+    color: 'white',
+     fontSize: 14,
+     fontWeight: 'bold',
+  },
+
+  rank_trophy: {
+    flex: 2,
+    color: 'white',
+    fontSize: 14,
+    fontWeight: 'bold',
+  }
    
    });
 
